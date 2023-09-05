@@ -29,15 +29,28 @@ We refer to a promise as settled if it is no longer pending— it is either fulf
 
 If our dishwashing promise is fulfilled, we’ll be able to perform related tasks, such as unloading the clean dishes from the dishwasher. If it’s rejected, we can take alternate steps, such as running it again with soap or washing the dishes by hand.
 
-All promises eventually settle, enabling us to write logic for what to do if the promise fulfills or if it rejects.
+<hr><br>
 
-## States of a JavaScript Promise
+A JavaScript `Promise` object can be in one of three states:`pending`, `resolved`, or `rejected`.
 
-A JavaScript Promise object can be in one of three states:
+While the value is not yet available, the`Promise` stays in the `pending` state. Afterwards, it transitions to one of the two states: `resolved` or `rejected`.
 
-- **Pending:** This is the initial state where the Promise is waiting for its value to become available.
-- **Resolved:** A resolved promise indicates a successful completion. It means the asynchronous operation associated with the Promise has completed successfully.
-- **Rejected:** If there are errors or issues, the promise may go into the rejected state, indicating a failure.
+A `resolved` promise stands for a successful completion. Due to errors, the promise may go in the `rejected` state.
 
-In the example code block, when the Promise is in the resolved state, the first parameter containing a callback function of the `.then()` method will print the resolved value. Otherwise, if the Promise is rejected, an alert will be shown.
+In the example code block, if the `Promise` is on `resolved` state, the first parameter holding a callback function of the `.then()` method will print the resolved value. Otherwise, an alert will be shown.
 
+```javaScript
+const promise = new Promise((resolve, reject) => {
+  const res = true;
+  // An asynchronous operation.
+  if (res) {
+    resolve('Resolved!');
+  }
+  else {
+    reject(Error('Error'));
+  }
+});
+
+promise.then((res) => console.log(res), (err) => alert(err));
+
+```
