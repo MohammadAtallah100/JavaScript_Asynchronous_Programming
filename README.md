@@ -28,7 +28,8 @@ We refer to a promise as settled if it is no longer pending— it is either fulf
 - **Fulfilled:** The dishwasher has completed the washing cycle and is full of clean dishes.
 - **Rejected:** The dishwasher encountered a problem (it didn’t receive soap!) and returns unclean dishes.
 
-If our dishwashing promise is fulfilled, we’ll be able to perform related tasks, such as unloading the clean dishes from the dishwasher. If it’s rejected, we can take alternate steps, such as running it again with soap or washing the dishes by hand.
+If our dishwashing promise is fulfilled, we’ll be able to perform related tasks, such as unloading the clean dishes from the dishwasher. If it’s rejected, we can take alternate steps, such as running it again with soap or washing the dishes by hand.<br>
+
 ![Screenshot 2023-09-05 at 4 49 53 PM](https://github.com/MohammadAtallah100/JavaScript_Asynchronous_Programming/assets/136754163/9bddd332-e531-4a13-af15-94e7c9a4ff28)
 
 
@@ -57,3 +58,5 @@ const promise = new Promise((resolve, reject) => {
 promise.then((res) => console.log(res), (err) => alert(err));
 
 ```
+##The .catch() method for handling rejection
+
