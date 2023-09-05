@@ -130,3 +130,120 @@ const promise = new Promise(executorFn);
 <hr>
 <br>
 
+## .then() method of a JavaScript Promise object
+
+The `.then()` method of a JavaScript `Promise` object can be used to get the eventual result (or error) of the asynchronous operation.
+
+`.then()` accepts two function arguments. The first handler supplied to it will be called if the promise is resolved. The second one will be called if the promise is rejected.
+
+```javaScript
+const promise = new Promise((resolve, reject) => {    
+  setTimeout(() => {
+    resolve('Result');
+  }, 200);
+});
+
+promise.then((res) => {
+  console.log(res);
+}, (err) => {
+  alert(err);
+});
+```
+
+<br>
+<hr>
+<br>
+
+## setTimeout()
+
+`setTimeout()` is an asynchronous JavaScript function that executes a code block or evaluates an expression through a callback function after a delay set in milliseconds.
+```javaScript
+
+const loginAlert = () =>{
+  alert('Login');
+};
+
+setTimeout(loginAlert, 6000);
+```
+
+<br>
+<hr>
+<br>
+
+## Avoiding nested Promise and .then()
+In JavaScript, when performing multiple asynchronous operations in a sequence, promises should be composed by chaining multiple `.then()` methods. This is better practice than nesting.
+
+Chaining helps streamline the development process because it makes the code more readable and easier to debug.
+```javaScript
+
+const promise = new Promise((resolve, reject) => {  
+  setTimeout(() => {
+    resolve('*');
+  }, 1000);
+});
+
+const twoStars = (star) => {  
+  return (star + star);
+};
+
+const oneDot = (star) => {  
+  return (star + '.');
+};
+
+const print = (val) => {
+  console.log(val);
+};
+
+// Chaining them all together
+promise.then(twoStars).then(oneDot).then(print);
+```
+
+<br>
+<hr>
+<br>
+
+## Creating a Javascript Promise object
+An instance of a JavaScript `Promise` object is created using the `new` keyword.
+
+The constructor of the `Promise` object takes a function, known as the executor function, as the argument. This function is responsible for resolving or rejecting the promise.
+```javaScript
+const executorFn = (resolve, reject) => {
+  console.log('The executor function of the promise!');
+};
+
+const promise = new Promise(executorFn);
+```
+
+<br>
+<hr>
+<br>
+
+## The Promise Object
+A `Promise` is an object that can be used to get the outcome of an asynchronous operation when that result is not instantly available.
+
+Since JavaScript code runs in a non-blocking manner, promises become essential when we have to wait for some asynchronous operation without holding back the execution of the rest of the code.
+<br>
+<hr>
+<br>
+
+## Chaining multiple .then() methods
+The `.then()` method returns a Promise, even if one or both of the handler functions are absent. Because of this, multiple `.then()` methods can be chained together. This is known as composition.
+
+In the code block, a couple of `.then()` methods are chained together. Each method deals with the resolved value of their respective promises.
+
+```javaScript
+const promise = new Promise(resolve => setTimeout(() => resolve('dAlan'), 100));
+
+promise.then(res => {
+  return res === 'Alan' ? Promise.resolve('Hey Alan!') : Promise.reject('Who are you?')
+}).then((res) => {
+  console.log(res)
+}, (err) => {
+  alert(err)
+});
+```
+<br>
+<hr>
+<br>
+
+
