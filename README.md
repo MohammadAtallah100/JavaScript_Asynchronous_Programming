@@ -31,3 +31,13 @@ If our dishwashing promise is fulfilled, we’ll be able to perform related task
 
 All promises eventually settle, enabling us to write logic for what to do if the promise fulfills or if it rejects.
 
+## States of a JavaScript Promise
+
+A JavaScript Promise object can be in one of three states:
+
+- **Pending:** This is the initial state where the Promise is waiting for its value to become available.
+- **Resolved:** A resolved promise indicates a successful completion. It means the asynchronous operation associated with the Promise has completed successfully.
+- **Rejected:** If there are errors or issues, the promise may go into the rejected state, indicating a failure.
+
+In the example code block, when the Promise is in the resolved state, the first parameter containing a callback function of the `.then()` method will print the resolved value. Otherwise, if the Promise is rejected, an alert will be shown.
+
