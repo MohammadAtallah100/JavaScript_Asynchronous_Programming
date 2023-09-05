@@ -11,6 +11,9 @@ There are countless examples of asynchronicity in our everyday lives. Cleaning o
 
 Similarly, web development makes use of asynchronous operations. Operations like making a network request or querying a database can be time-consuming, but JavaScript allows us to execute other tasks while awaiting their completion.
 
+![Screenshot 2023-09-05 at 4 49 53 PM](https://github.com/MohammadAtallah100/JavaScript_Asynchronous_Programming/assets/136754163/9bddd332-e531-4a13-af15-94e7c9a4ff28)
+
+
 This lesson will teach you how modern JavaScript handles asynchronicity using the ` Promise ` object, Let’s get started!
 <hr>
 ## What is a Promise?
