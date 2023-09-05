@@ -14,6 +14,7 @@ Similarly, web development makes use of asynchronous operations. Operations like
 
 This lesson will teach you how modern JavaScript handles asynchronicity using the ` Promise ` object, Let’s get started!
 <hr>
+
 ## What is a Promise?
 
 Promises are objects that represent the eventual outcome of an asynchronous operation. A Promise object can be in one of three states:
@@ -58,5 +59,28 @@ const promise = new Promise((resolve, reject) => {
 promise.then((res) => console.log(res), (err) => alert(err));
 
 ```
+<br>
+<hr>
 ## The .catch() method for handling rejection
+
+The function passed as the second argument to a `.then()` method of a promise object is used when the promise is rejected. An alternative to this approach is to use the JavaScript `.catch()` method of the promise object. The information for the rejection is available to the handler supplied in the `.catch()` method.
+
+```javaScript
+const promise = new Promise((resolve, reject) => {  
+  setTimeout(() => {
+    reject(Error('Promise Rejected Unconditionally.'));
+  }, 1000);
+});
+
+promise.then((res) => {
+  console.log(value);
+});
+
+promise.catch((err) => {
+  alert(err);
+});
+```
+<br>
+<hr>
+
 
