@@ -372,3 +372,24 @@ msg(); // Message: Hello World! <-- after 2 seconds
 <br>
 <hr>
 <br>
+
+<h1>Review</h1>
+<br>
+<h3>Awesome work getting the hang of the async...await syntax! Let’s review what you’ve learned:</h3>
+
+<ul>
+  <li>async...await is syntactic sugar built on native JavaScript promises and generators.</li>
+  <li>We declare an async function with the keyword async.
+</li>
+  <li>Inside an async function we use the await operator to pause execution of our function until an asynchronous action completes and the awaited promise is no longer pending .
+</li>
+  <li>await returns the resolved value of the awaited promise.
+</li>
+  <li>We can write multiple await statements to produce code that reads like synchronous code.
+</li>
+  <li>We use try...catch statements within our async functions for error handling.
+</li>
+  <li>We should still take advantage of concurrency by writing async functions that allow asynchronous actions to happen in concurrently whenever possible.
+</li>
+
+</ul>
